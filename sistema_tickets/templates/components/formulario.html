@@ -1,0 +1,25 @@
+<h2>Registrar Ticket</h2>
+<form action="/registrar" method="POST">
+    <label for="id">Número / ID Único:</label><br>
+    <input type="text" id="id" name="id" required><br><br>
+
+    <label for="cliente">Nombre del Cliente:</label><br>
+    <input type="text" id="cliente" name="cliente" required><br><br>
+
+    <label for="solicitante">Persona que Solicita Atención:</label><br>
+    <input type="text" id="solicitante" name="solicitante" required><br><br>
+
+    <label for="problema">Tipo de Problema:</label><br>
+    <input type="text" id="problema" name="problema" required><br><br>
+
+    <label for="prioridad">Prioridad:</label><br>
+    <select id="prioridad" name="prioridad">
+        <option value="Normal">Normal</option>
+        <option value="Prioritaria">Prioritaria</option>
+    </select><br><br>
+
+    <label for="tiempo">Tiempo Estimado (minutos):</label><br>
+    <input type="number" id="tiempo" name="tiempo" min="1" required><br><br>
+
+    <input type="submit" value="Registrar Ticket">
+</form>

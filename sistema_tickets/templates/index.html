@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Atención de Tickets</title>
+</head>
+<body>
+
+    <h1>Sistema de Atención de Tickets (FIFO)</h1>
+
+    <!-- Inclusión del Formulario de Registro -->
+    {% include 'components/formulario.html' %}
+
+    <hr>
+
+    <!-- Inclusión de Gestión de Atención (Atender / Siguiente) -->
+    {% include 'components/gestion.html' %}
+
+    <hr>
+
+    <!-- Inclusión de las Estadísticas -->
+    {% include 'components/estadisticas.html' %}
+
+    <hr>
+
+    <!-- Inclusión de las Tablas de las Filas -->
+    {% include 'components/tablas.html' %}
+
+</body>
+</html>

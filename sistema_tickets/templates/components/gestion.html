@@ -1,0 +1,20 @@
+<h2>Gestión de Atención</h2>
+<form action="/atender" method="POST">
+    <input type="submit" value="Atender Siguiente Ticket">
+</form>
+
+<p><strong>Consultar Siguiente Ticket en Espera:</strong> 
+    {% if siguiente %}
+        [Fila {{ siguiente.fila }}] ID: {{ siguiente.ticket.id }} - Cliente: {{ siguiente.ticket.cliente }}
+    {% else %}
+        No hay tickets en espera.
+    {% endif %}
+</p>
+
+<p><strong>Último Ticket Atendido:</strong> 
+    {% if ultimo_atendido %}
+        ID: {{ ultimo_atendido.id }} | Cliente: {{ ultimo_atendido.cliente }} | Tiempo: {{ ultimo_atendido.tiempo }} min
+    {% else %}
+        Ninguno atendido aún.
+    {% endif %}
+</p>

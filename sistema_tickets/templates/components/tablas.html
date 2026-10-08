@@ -1,0 +1,57 @@
+<h2>Filas de Atención</h2>
+
+<h3>Fila Prioritaria</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Solicitante</th>
+            <th>Problema</th>
+            <th>Tiempo Estimado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ticket in fila_prioritaria %}
+        <tr>
+            <td>{{ ticket.id }}</td>
+            <td>{{ ticket.cliente }}</td>
+            <td>{{ ticket.solicitante }}</td>
+            <td>{{ ticket.problema }}</td>
+            <td>{{ ticket.tiempo }} min</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="5">Sin tickets en fila prioritaria</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Fila Normal</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Solicitante</th>
+            <th>Problema</th>
+            <th>Tiempo Estimado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for ticket in fila_normal %}
+        <tr>
+            <td>{{ ticket.id }}</td>
+            <td>{{ ticket.cliente }}</td>
+            <td>{{ ticket.solicitante }}</td>
+            <td>{{ ticket.problema }}</td>
+            <td>{{ ticket.tiempo }} min</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="5">Sin tickets en fila normal</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
